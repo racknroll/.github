@@ -1,4 +1,4 @@
-# racknroll
+# Rack'n Roll
 
 A self-hosted home lab and two automated newsrooms. Infrastructure as code, pipelines as
 code, everything reproducible from the repos in this org.
