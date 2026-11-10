@@ -1,7 +1,8 @@
 # Rack'n Roll
 
-> A self-hosted home lab and two automated newsrooms — infrastructure as code, pipelines as
-> code, everything reproducible from the repos in this org.
+> A self-hosted home lab and two automated newsrooms.
+>
+> Infrastructure as code, pipelines as code — everything reproducible from the repos in this org.
 
 [![homelab CI](https://github.com/racknroll/homelab/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/racknroll/homelab/actions/workflows/ci.yml)
 [![usevimli.dev](https://github.com/racknroll/usevimli.dev/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/racknroll/usevimli.dev/actions/workflows/build.yml)
@@ -61,6 +62,7 @@ flowchart TB
     GH["GitHub Actions"] --> R["self-hosted runners<br/>inside the lab"]
     R -- "publish images" --> H["Harbor<br/>+ Trivy scans"]
     R -- "build & deploy" --> S["services<br/>n8n · Prometheus · Alertmanager · …"]
+    H -- "pull images" --> S
     A["homelab-apply<br/>nightly converge"] --> S
     H --- NAS["Synology NAS<br/>registry blobs + backups"]
 ```
