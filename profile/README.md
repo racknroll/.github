@@ -14,6 +14,27 @@
 | 📰 [usevimli.dev](https://usevimli.dev) | Tech newsroom — bilingual (TR/EN) daily briefings and articles |
 | 🥊 [tatami.usevimli.dev](https://tatami.usevimli.dev) | Combat-sports newsroom — Turkish-language fight news |
 
+## What lives here
+
+| Repo | What it is |
+|---|---|
+| [`homelab`](https://github.com/racknroll/homelab) | The lab itself: hypervisor, containers, services, CI, monitoring — declared, applied and tested from this one repo |
+| [`usevimli.dev`](https://github.com/racknroll/usevimli.dev) | Tech newsroom — content pipeline, site and automation |
+| [`tatami.usevimli.dev`](https://github.com/racknroll/tatami.usevimli.dev) | Combat-sports newsroom — same pipeline, same discipline |
+
+*Repos are private — this page is the public front door.*
+
+## How it works
+
+- **Newsrooms** — an [n8n](https://n8n.io) pipeline collects sources, drafts stories with
+  GLM, runs fact-check and house-style gates, then publishes. Sites build and deploy on
+  every push; every story carries its edit notes with it.
+- **Infrastructure** — services, versions and configuration live in the `homelab` repo.
+  Nightly jobs converge the lab to the declared state; CI runs on self-hosted runners
+  inside the lab, not on borrowed machines.
+- **Operations** — least-privilege tokens and deploy keys, no secrets in git, snapshots
+  before every change, alerts on every failure.
+
 ## The newsroom pipeline
 
 ```mermaid
@@ -23,6 +44,7 @@ flowchart LR
     D --> G{"Gates<br/>fact-check +<br/>house style"}
     G -- pass --> B["Astro build<br/>Cloudflare Pages"]
     G -- fail --> E["edit notes,<br/>rework"]
+    E --> D
     B --> W1["usevimli.dev"]
     B --> W2["tatami.usevimli.dev"]
 
@@ -42,25 +64,6 @@ flowchart TB
     A["homelab-apply<br/>nightly converge"] --> S
     H --- NAS["Synology NAS<br/>registry blobs + backups"]
 ```
-
-## What lives here
-
-| Repo | What it is |
-|---|---|
-| [`homelab`](https://github.com/racknroll/homelab) | The lab itself: hypervisor, containers, services, CI, monitoring — declared, applied and tested from this one repo |
-| [`usevimli.dev`](https://github.com/racknroll/usevimli.dev) | Tech newsroom — content pipeline, site and automation |
-| [`tatami.usevimli.dev`](https://github.com/racknroll/tatami.usevimli.dev) | Combat-sports newsroom — same pipeline, same discipline |
-
-## How it works
-
-- **Newsrooms** — an [n8n](https://n8n.io) pipeline collects sources, drafts stories with
-  GLM, runs fact-check and house-style gates, then publishes. Sites build and deploy on
-  every push; every story carries its edit notes with it.
-- **Infrastructure** — services, versions and configuration live in the `homelab` repo.
-  Nightly jobs converge the lab to the declared state; CI runs on self-hosted runners
-  inside the lab, not on borrowed machines.
-- **Operations** — least-privilege tokens and deploy keys, no secrets in git, snapshots
-  before every change, alerts on every failure.
 
 ## Stack
 
