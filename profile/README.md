@@ -63,10 +63,12 @@ flowchart LR
 flowchart TB
     GH["GitHub Actions"] --> R["self-hosted runners<br/>inside the lab"]
     R -- "publish images" --> H["Harbor<br/>+ Trivy scans"]
-    R -- "build & deploy" --> S["services<br/>n8n · Prometheus · Alertmanager · …"]
+    R -- "build & deploy" --> S["services on pve<br/>n8n · Prometheus · Alertmanager · …"]
     H -- "pull images" --> S
     A["homelab-apply<br/>nightly converge"] --> S
     H --- NAS["Synology NAS<br/>registry blobs + backups"]
+    S --- E["edge: Cloudflare Tunnel<br/>only ntfy is public"]
+    D["devices<br/>admin netbook · Raspberry Pi arm64 builds"] --- S
 ```
 
 ## Stack
