@@ -3,7 +3,9 @@
 > A self-hosted home lab and two automated newsrooms — infrastructure as code, pipelines as
 > code, everything reproducible from the repos in this org.
 
-[![CI](https://github.com/racknroll/homelab/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/racknroll/homelab/actions/workflows/ci.yml)
+[![homelab CI](https://github.com/racknroll/homelab/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/racknroll/homelab/actions/workflows/ci.yml)
+[![usevimli.dev](https://github.com/racknroll/usevimli.dev/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/racknroll/usevimli.dev/actions/workflows/build.yml)
+[![tatami.usevimli.dev](https://github.com/racknroll/tatami.usevimli.dev/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/racknroll/tatami.usevimli.dev/actions/workflows/test.yml)
 
 ## Live
 
@@ -12,7 +14,7 @@
 | 📰 [usevimli.dev](https://usevimli.dev) | Tech newsroom — bilingual (TR/EN) daily briefings and articles |
 | 🥊 [tatami.usevimli.dev](https://tatami.usevimli.dev) | Combat-sports newsroom — Turkish-language fight news |
 
-## The pipeline
+## The newsroom pipeline
 
 ```mermaid
 flowchart LR
@@ -23,6 +25,22 @@ flowchart LR
     G -- fail --> E["edit notes,<br/>rework"]
     B --> W1["usevimli.dev"]
     B --> W2["tatami.usevimli.dev"]
+
+    classDef good stroke:#1a7f37
+    classDef bad stroke:#cf222e
+    class B,W1,W2 good
+    class E bad
+```
+
+## The lab
+
+```mermaid
+flowchart TB
+    GH["GitHub Actions"] --> R["self-hosted runners<br/>inside the lab"]
+    R -- "publish images" --> H["Harbor<br/>+ Trivy scans"]
+    R -- "build & deploy" --> S["services<br/>n8n · Prometheus · Alertmanager · …"]
+    A["homelab-apply<br/>nightly converge"] --> S
+    H --- NAS["Synology NAS<br/>registry blobs + backups"]
 ```
 
 ## What lives here
@@ -43,6 +61,15 @@ flowchart LR
   inside the lab, not on borrowed machines.
 - **Operations** — least-privilege tokens and deploy keys, no secrets in git, snapshots
   before every change, alerts on every failure.
+
+## Stack
+
+- **Infrastructure:** Proxmox VE · Terraform · LXC · self-hosted GitHub Actions runners
+- **Automation:** n8n · GLM
+- **Sites:** Astro · Cloudflare Pages
+- **Registry:** Harbor · Trivy
+- **Monitoring:** Prometheus · Alertmanager
+- **Networking & storage:** Tailscale · Synology NAS
 
 ## Principles
 
