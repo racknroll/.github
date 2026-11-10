@@ -1,12 +1,14 @@
-# Rack'n Roll
+<p align="center">
+  <img src="banner.svg" alt="Rack'n Roll — self-hosted home lab · automated newsrooms" width="640">
+</p>
 
-> A self-hosted home lab and two automated newsrooms.
->
-> Infrastructure as code, pipelines as code — everything reproducible from the repos in this org.
+<p align="center"><em>Infrastructure as code, pipelines as code — everything reproducible from the repos in this org.</em></p>
 
-[![homelab CI](https://github.com/racknroll/homelab/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/racknroll/homelab/actions/workflows/ci.yml)
-[![usevimli.dev](https://github.com/racknroll/usevimli.dev/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/racknroll/usevimli.dev/actions/workflows/build.yml)
-[![tatami.usevimli.dev](https://github.com/racknroll/tatami.usevimli.dev/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/racknroll/tatami.usevimli.dev/actions/workflows/test.yml)
+<p align="center">
+  <a href="https://github.com/racknroll/homelab/actions/workflows/ci.yml"><img src="https://github.com/racknroll/homelab/actions/workflows/ci.yml/badge.svg?branch=main" alt="homelab CI"></a>
+  <a href="https://github.com/racknroll/usevimli.dev/actions/workflows/build.yml"><img src="https://github.com/racknroll/usevimli.dev/actions/workflows/build.yml/badge.svg?branch=main" alt="usevimli.dev build"></a>
+  <a href="https://github.com/racknroll/tatami.usevimli.dev/actions/workflows/test.yml"><img src="https://github.com/racknroll/tatami.usevimli.dev/actions/workflows/test.yml/badge.svg?branch=main" alt="tatami.usevimli.dev test"></a>
+</p>
 
 ## Live
 
