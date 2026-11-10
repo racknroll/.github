@@ -1,15 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-label="Rack'n Roll">
-  <!-- Dark cover tuned for GitHub; safe fallback fonts, no external assets -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-label="Rack'n Roll — one key holding the racks together">
+  <!-- Dark cover tuned for GitHub; key-and-racks mark, no external assets -->
   <rect x="0" y="0" width="1200" height="320" rx="24" fill="#0d1117"/>
   <rect x="1.5" y="1.5" width="1197" height="317" rx="22.5" fill="none" stroke="#30363d" stroke-width="3"/>
 
-  <text x="600" y="152" text-anchor="middle"
+  <!-- Mark: a key whose ring holds two rack cabinets together -->
+  <g>
+    <!-- rack cabinets hanging on the key ring -->
+    <rect x="140" y="138" width="34" height="52" rx="6" fill="#10151d" stroke="#30363d" stroke-width="3"/>
+    <line x1="148" y1="150" x2="166" y2="150" stroke="#30363d" stroke-width="3"/>
+    <line x1="148" y1="160" x2="166" y2="160" stroke="#30363d" stroke-width="3"/>
+    <line x1="148" y1="170" x2="166" y2="170" stroke="#30363d" stroke-width="3"/>
+    <circle cx="166" cy="145" r="3" fill="#3fb950"/>
+    <rect x="226" y="138" width="34" height="52" rx="6" fill="#10151d" stroke="#30363d" stroke-width="3"/>
+    <line x1="234" y1="150" x2="252" y2="150" stroke="#30363d" stroke-width="3"/>
+    <line x1="234" y1="160" x2="252" y2="160" stroke="#30363d" stroke-width="3"/>
+    <line x1="234" y1="170" x2="252" y2="170" stroke="#30363d" stroke-width="3"/>
+    <circle cx="252" cy="145" r="3" fill="#3fb950"/>
+    <!-- key: ring, shaft, teeth -->
+    <circle cx="200" cy="106" r="27" stroke="#ffffff" stroke-width="9" fill="none"/>
+    <rect x="195.5" y="130" width="9" height="70" rx="4.5" fill="#ffffff"/>
+    <rect x="204" y="166" width="15" height="9" rx="2" fill="#ffffff"/>
+    <rect x="204" y="182" width="11" height="9" rx="2" fill="#ffffff"/>
+  </g>
+
+  <text x="750" y="150" text-anchor="middle"
         font-family="system-ui, -apple-system, 'Segoe UI', sans-serif"
         font-size="76" font-weight="700" fill="#ffffff">Rack’n Roll</text>
 
-  <rect x="540" y="184" width="120" height="5" rx="2.5" fill="#1a7f37"/>
+  <rect x="690" y="184" width="120" height="5" rx="2.5" fill="#1a7f37"/>
 
-  <text x="600" y="246" text-anchor="middle"
+  <text x="750" y="246" text-anchor="middle"
         font-family="system-ui, -apple-system, 'Segoe UI', sans-serif"
         font-size="26" font-weight="500" letter-spacing="4" fill="#8b949e">HOME LAB · AUTOMATED NEWSROOMS</text>
 </svg>

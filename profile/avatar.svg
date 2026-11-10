@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Rack'n Roll">
+  <!-- Square avatar tile: key-and-racks mark. Convert to 1024x1024 PNG for org upload. -->
+  <rect x="0" y="0" width="256" height="256" rx="56" fill="#0d1117"/>
+  <rect x="2" y="2" width="252" height="252" rx="54" fill="none" stroke="#30363d" stroke-width="4"/>
+
+  <g>
+    <rect x="68" y="130" width="34" height="52" rx="6" fill="#10151d" stroke="#30363d" stroke-width="3"/>
+    <line x1="76" y1="142" x2="94" y2="142" stroke="#30363d" stroke-width="3"/>
+    <line x1="76" y1="152" x2="94" y2="152" stroke="#30363d" stroke-width="3"/>
+    <line x1="76" y1="162" x2="94" y2="162" stroke="#30363d" stroke-width="3"/>
+    <circle cx="94" cy="137" r="3" fill="#3fb950"/>
+    <rect x="154" y="130" width="34" height="52" rx="6" fill="#10151d" stroke="#30363d" stroke-width="3"/>
+    <line x1="162" y1="142" x2="180" y2="142" stroke="#30363d" stroke-width="3"/>
+    <line x1="162" y1="152" x2="180" y2="152" stroke="#30363d" stroke-width="3"/>
+    <line x1="162" y1="162" x2="180" y2="162" stroke="#30363d" stroke-width="3"/>
+    <circle cx="180" cy="137" r="3" fill="#3fb950"/>
+    <circle cx="128" cy="98" r="27" stroke="#ffffff" stroke-width="9" fill="none"/>
+    <rect x="123.5" y="122" width="9" height="70" rx="4.5" fill="#ffffff"/>
+    <rect x="132" y="158" width="15" height="9" rx="2" fill="#ffffff"/>
+    <rect x="132" y="174" width="11" height="9" rx="2" fill="#ffffff"/>
+  </g>
+</svg>
