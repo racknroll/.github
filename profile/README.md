@@ -24,6 +24,9 @@
 | [`homelab`](https://github.com/racknroll/homelab) | The lab itself: hypervisor, containers, services, CI, monitoring — declared, applied and tested from this one repo |
 | [`usevimli.dev`](https://github.com/racknroll/usevimli.dev) | Tech newsroom — content pipeline, site and automation |
 | [`tatami.usevimli.dev`](https://github.com/racknroll/tatami.usevimli.dev) | Combat-sports newsroom — same pipeline, same discipline |
+| [`curator`](https://github.com/racknroll/curator) | Media library care: finds the same film or episode twice, shows the copies side by side, never deletes on its own |
+| [`devbox`](https://github.com/racknroll/devbox) | The agents' workspace on the NAS: AI coding sessions in tmux behind a web console |
+| [`hardware`](https://github.com/racknroll/hardware) | The lab's private inventory: serials, disk health, physical layout (kept out of homelab so that repo stays secret-free) |
 
 *Repos are private — this page is the public front door.*
 
