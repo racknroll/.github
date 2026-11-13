@@ -4,12 +4,6 @@
 
 <p align="center"><em>Infrastructure as code, pipelines as code — everything reproducible from the repos in this org.</em></p>
 
-<p align="center">
-  <a href="https://github.com/racknroll/homelab/actions/workflows/ci.yml"><img src="https://github.com/racknroll/homelab/actions/workflows/ci.yml/badge.svg?branch=main" alt="homelab CI"></a>
-  <a href="https://github.com/racknroll/usevimli.dev/actions/workflows/build.yml"><img src="https://github.com/racknroll/usevimli.dev/actions/workflows/build.yml/badge.svg?branch=main" alt="usevimli.dev build"></a>
-  <a href="https://github.com/racknroll/tatami.usevimli.dev/actions/workflows/test.yml"><img src="https://github.com/racknroll/tatami.usevimli.dev/actions/workflows/test.yml/badge.svg?branch=main" alt="tatami.usevimli.dev test"></a>
-</p>
-
 ## Live
 
 | | |
